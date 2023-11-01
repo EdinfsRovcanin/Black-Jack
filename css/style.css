@@ -1,9 +1,13 @@
+html {
+    width: 600px;
+}
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 600px;
 }
 .container {
     background-color: #016f32;
-    width: 800px;
+    width: 600px;
     height: 800px;
     margin: auto;
     text-align: center;
