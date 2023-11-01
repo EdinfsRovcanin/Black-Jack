@@ -9,7 +9,7 @@ let cardsEl = document.getElementById("cards-el")
 let cardValues = [];
 let cardImages = [];
 let player = {
-    name: "Edin",
+    name: "Torsk",
     chips: 250
 }
 
