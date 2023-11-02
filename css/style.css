@@ -1,17 +1,15 @@
-html {
-    width: 600px;
-    margin: auto;
-}
+
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    width: 600px;
-    margin: auto;
+    /* width: 900px;
+    margin: auto; */
 }
 .container {
     background-color: #016f32;
     width: 600px;
     height: 800px;
     margin: auto;
+    margin-top: 100px;
     text-align: center;
     color: white;
     border-radius: 30px;
@@ -48,4 +46,17 @@ button {
 .card-image {
     width: 100px; 
     height: 150px;
+}
+
+@media (max-width: 960px) {
+    body {
+        width: 700px;
+    }
+    .container {
+       max-width: 500px;
+        
+        /* margin-left: 50px; */
+        max-height: 700px;
+        margin: auto;
+    }
 }
