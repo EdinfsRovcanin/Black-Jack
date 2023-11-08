@@ -31,23 +31,29 @@ function startGame() {
 
 
 function getRandomCard() {
-    let randomNumber = Math.floor(Math.random() * 13) + 1; // Ändrat området till 1-13
+    let randomNumber = Math.floor(Math.random() * 14) + 1;
     let cardNumber;
     let cardImage;
 
-    if (randomNumber > 10) {
-        cardNumber = 10;
-    } else if (randomNumber === 1) {
+    if (randomNumber === 1) {
         cardNumber = 11;
-    } else {
+        cardImage = "card01.png";
+    } else if (randomNumber === 11) {
+        cardNumber = 11;
+        cardImage = "card11.png";
+    } else if (randomNumber === 12) {
+        cardNumber = 10;
+        cardImage = "card12.png";
+    } else if (randomNumber === 13) {
+        cardNumber = 10;
+        cardImage = "card13.png";
+    } else if (randomNumber === 14) {
+        cardNumber = 10;
+        cardImage = "card14.png";
+    } 
+    else {
         cardNumber = randomNumber;
-    }
-
-    // Skapa en sökväg baserat på kortnumret
-    if (cardNumber === 11) {
-        cardImage = "card01.png"; // Sökväg till bild för nummer 11
-    } else {
-        cardImage = `card${cardNumber}.png`; // Sökväg till övriga bilder
+        cardImage = `card${randomNumber}.png`;
     }
 
     return {
