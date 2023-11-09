@@ -12,11 +12,15 @@ let player = {
     name: "Torsk",
     chips: 250
 }
+const getCardSound = new Audio("sound/120508__bigmac4029__1cards.wav");
 
 let playerEl = document.getElementById("player-el")
 playerEl.textContent = player.name + ": $" + player.chips
 
 function startGame() {
+    
+    getCardSound.play();
+
     isAlive = true;
     cardValues = [];
     cardImages = [];
@@ -87,10 +91,12 @@ function renderGame() {
 
 function newCard() {
     if (isAlive === true && hasBlackJack === false) {
+        getCardSound.play();
         let card = getRandomCard();
         cardValues.push(card.number);
         cardImages.push(card.image);
         sum += card.number;
         renderGame();
+       
     }
 }
